@@ -9,9 +9,29 @@
 </head>
 <body>
 <main>
-    <h1>Puddle Nymphe Oracle</h1>
-    <div id="answer-container"></div>
+
+    <div class="puddle-oracle">
+
+        <!-- <h1>Puddle Nymphe Oracle</h1> -->
+        <div id="answer-container"></div>
+
+        <form action="/submit" method="post">
+            <input type="text" id="question" name="question" placeholder="Ask the Puddle Nymphe!">
+            <input type="submit" value="Go!">
+        </form>
+    
+
+        <div class="stein-container">
+            <img src="IMG/Stein.png" alt="Stein">
+        </div>
+
+        <div class = "nymphe-container">
+        <img src="IMG/Nixe_slow.gif" alt="Nymphe">
+        </div>
+    </div>
+
 </main>
+
 <script src="script.js" type = "module" ></script>
 </body>
 </html>
