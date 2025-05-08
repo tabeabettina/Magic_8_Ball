@@ -48,7 +48,7 @@ input[type="text"] {
     border: none;
 }
 
-input[type="submit"] {
+input[type="button"] {
     padding: 10px 18px;
     height: 50px;
     background-color: black;
@@ -58,11 +58,20 @@ input[type="submit"] {
     text-align: center;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
     background-color: white;
     height: 50px;
     color: black;
     cursor: pointer;
+}
+
+#answer-container {
+    position: fixed;
+    padding: 50px;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    z-index: 99;
 }
  
 .nymphe-container{
@@ -123,6 +132,7 @@ input[type="submit"]:hover {
     display: block;
     z-index: 9;
     cursor: none;
+    display: none;
 }
 
 .frosch-container img {

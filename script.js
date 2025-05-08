@@ -1,18 +1,19 @@
+const button = document.querySelector('#submit');
 const container = document.querySelector ("#answer-container");
 const API_URL = 'https://answerbook.david888.com/?lang=en';
 
-const myData = await fetchData(API_URL);
-console.log (myData);
+button.addEventListener('click', async () => {
+    const data = await fetchData(API_URL);
+    showData(data);
+});
 
 
-// let zahl = 200;
-// let text1 = "Melissa" + zahl;
-// console.log(text1);
-// let text2 = `Melissa ${zahl};`
-// console.log (text2);
+// const myData = await fetchData(API_URL);
+// console.log (myData);
 
 
-showData();
+
+// showData();
 
 async function fetchData (url) {
     try {
@@ -27,10 +28,14 @@ async function fetchData (url) {
 }
 
 
-function showData (){
-        console.log(myData.answer);
-        // let card = document.createElement("article");
-        // card.classList.add("card");
-        // card.innerHTML = `<h2>${myData.answer}</h2>`;
-        // container.appendChild(card);
+function showData (myData){
+    console.log(myData.answer);
+    container.innerHTML = `<h2>${myData.answer}</h2>`;
 }
+
+
+// let zahl = 200;
+// let text1 = "Melissa" + zahl;
+// console.log(text1);
+// let text2 = `Melissa ${zahl};`
+// console.log (text2);
