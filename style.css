@@ -12,18 +12,36 @@
 
 }
 body {
-    background-color: purple;    
+    background-color: purple;   
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden; 
 }
 .puddle-oracle {
-    padding: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80svh;
 }
 form{
     position: absolute;
     bottom: 50px;
     left:50px;
 }
+
+.inputfield {
+    width: 90vw;
+    max-width: 400px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+input {
+    z-index:9;
+    position: relative;
+}
 input[type="text"] {
-    width: 400px;
     height: 50px;
     padding: 10px 18px;
     border-radius: 10px;
@@ -32,7 +50,6 @@ input[type="text"] {
 
 input[type="submit"] {
     padding: 10px 18px;
-    margin-left: 20px;
     height: 50px;
     background-color: black;
     color: white;
@@ -43,28 +60,125 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: white;
-    padding: 18px 18px;
     height: 50px;
     color: black;
+    cursor: pointer;
 }
  
 .nymphe-container{
     position: absolute;
-    top: 200px;
-    right: 0px;
-    display: block;   
+    top: 250px;
+    left: 40px;
+    display: block; 
+    z-index: 10;
 }
 .nymphe-container img {
-    width: 700px;
+    width: 500px;
     height: auto;
     display: block;
 }
 .stein-container {
     position: absolute;
-    width: 500px;
-    top: 230px;
-    right: 200px;
+    width: 200px;
+    top: 250px;
+    right: 130px;
+    z-index: 2;
 }  
 .stein-container img {
-    width: 700px
+    width: 550px
 }
+
+.blatt-container {
+    position: absolute;
+    width: 100px;
+    bottom: -90px;
+    left: -80px;
+    display: block;
+    z-index: 3;
+    display: none;
+}
+
+.blatt-container img {
+    width: 200px;
+}
+
+.seerose-container {
+    position: absolute;
+    width: 300px;
+    bottom: -70px;
+    right: -80px;
+    display: block;
+    z-index: 3;
+}
+
+.seerose-container img {
+    width: 200px;
+}
+
+.frosch-container {
+    position: absolute;
+    width: 300px;
+    bottom: -20px;
+    right: 100px;
+    display: block;
+    z-index: 3;
+}
+
+.frosch-container img {
+    width: 400px;
+}
+
+img {
+    pointer-events: none;
+}
+
+.wave-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wave-dark {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 370px;
+    background-image: url(IMG/waves_dark.svg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    animation: waveMoveleft 30s linear infinite;
+    z-index: 2;
+
+
+}
+
+@keyframes waveMoveleft {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+    
+}
+
+.wave-light {
+    position: absolute;
+    bottom: 100px;
+    width: 200%;
+    height: 350px;
+    background-image: url("IMG/waves_light.svg");
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    animation: waveMoveright 20s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes waveMoveright {
+    from {
+      background-position: 100% 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
