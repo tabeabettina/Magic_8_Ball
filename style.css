@@ -72,28 +72,24 @@ input[type="button"]:hover {
 
 #answer-container {
     position: fixed;
-    top: 40px;
-    left: 120px;
-    width: 60vw;
-    height: 30svh;
-    padding: 50px;
+    width: 70vw;
+    height: 20svh;
+    top: 25px;
     text-align: center;
     z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding-right: 60px; */
-    padding-left: 22px;
-    padding-top: 25px;
-  
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
     
 }
 
-#answer-container::before{
+#answer-container.active::before{
     content: "";
     position: absolute;
-    background-image: url(/IMG/Sprechblase-neu.png);
-    transform: rotate(90deg);
+    background-image: url(/IMG/Sprechblase-gedreht.png);
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
@@ -161,6 +157,8 @@ input[type="button"]:hover {
     right: 100px;
     display: block;
     z-index: 9;
+    pointer-events: none;
+
 }
 
 .frosch-container img {
@@ -227,10 +225,10 @@ img {
     }
   }
 
-@media (min-width: 800px){
+@media (min-width: 1000px){
 
     .nymphe-container img{
-        width: 800px;
+        width: 700px;
     }
 
     
@@ -240,12 +238,12 @@ img {
     }
 
     .stein-container img{
-        width: 800px;
+        width: 700px;
     }
 
     .stein-container {
         bottom: 70px;
-        right: 500px;
+        right: 400px;
 
     }
 
@@ -256,12 +254,20 @@ img {
 
     .frosch-container img{
         width: 600px;
-    };
+    }
     
-    #answer-container{
-        padding-right: 120px;
-        padding-left: 90px;
-        padding-top: 90px;
+    #answer-container {
+        width: 22vw;
+        height: 20svh;
+        top: 25px;
+        padding-left: 15px;
+        
+    }
+
+    #answer-container.active::before{
+        background-image: url(/IMG/Sprechblase-neu.png);
+        width:100%;
+        height: 100%;
     }
 
 }

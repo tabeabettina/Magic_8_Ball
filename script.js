@@ -1,6 +1,7 @@
 const button = document.querySelector('#submit');
 const container = document.querySelector ("#answer-container");
 const API_URL = 'https://answerbook.david888.com/?lang=en';
+const speachbubble = document.querySelector("#answer-container");
 
 button.addEventListener('click', async () => {
     const data = await fetchData(API_URL);
@@ -29,8 +30,14 @@ async function fetchData (url) {
 
 
 function showData (myData){
+    speachbubble.classList.add("active");
     console.log(myData.answer);
-    container.innerHTML = `<h2>${myData.answer}</h2>`;
+    container.innerHTML = `${myData.answer}`;
+    setTimeout(() => {
+        speachbubble.classList.remove("active");
+        container.innerHTML = "";
+    }, 5000);
+    
 }
 
 
