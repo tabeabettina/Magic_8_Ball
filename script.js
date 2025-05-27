@@ -2,11 +2,24 @@ const button = document.querySelector('#submit');
 const container = document.querySelector ("#answer-container");
 const API_URL = 'https://answerbook.david888.com/?lang=en';
 const speachbubble = document.querySelector("#answer-container");
+const input = document.querySelector('#question');
+const form = document.querySelector('#oracle-form');
 
-button.addEventListener('click', async () => {
+
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (input.value.trim() === "") {
+        input.reportValidity();
+        return;
+    }
     const data = await fetchData(API_URL);
     showData(data);
+
+    input.value = '';
 });
+
+
 
 async function fetchData (url) {
     try {
@@ -36,9 +49,9 @@ const libelle = document.querySelector(".libelle");
 
 let posX = window.innerWidth / 2;
 let posY = window.innerHeight / 2;
-let speedX = 3;
-let speedY = 2.5;
-let angle = 90;
+let speedX = 1;
+let speedY = 1.5;
+let angle = 180;
 
 // alle paar Sekunden soll sie zufällig ein bisschen drehen
 let nextSpin = Date.now() + 1000;
