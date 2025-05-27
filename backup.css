@@ -3,7 +3,7 @@
     padding: 0 0;
     box-sizing: border-box;
     font-family: Londrina;
-    font-size: 22px;
+    font-size: 25px;
     letter-spacing: 0.1em;
     /* display: flex; */
 }
@@ -37,6 +37,7 @@ form{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    
 }
 
 input {
@@ -71,7 +72,7 @@ input[type="button"]:hover {
 
 #answer-container {
     position: fixed;
-    width: 50vw;
+    width: 70vw;
     height: 20svh;
     top: 25px;
     text-align: center;
@@ -79,15 +80,16 @@ input[type="button"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 10px;
+    
 }
 
 #answer-container.active::before{
     content: "";
     position: absolute;
-    background-image: url(/IMG/Sprechblase-clean-gedreht.png);
+    background-image: url(/IMG/Sprechblase-gedreht.png);
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
@@ -97,9 +99,6 @@ input[type="button"]:hover {
     z-index: -1;
 }
 
-#answer-container.active {
-    animation: fadeInScale 0.5s ease forwards;
-}
  
 .nymphe-container{
     position: absolute;
@@ -141,8 +140,8 @@ input[type="button"]:hover {
 .seerose-container {
     position: absolute;
     width: 300px;
-    bottom: -30px;
-    right: -120px;
+    bottom: -70px;
+    right: -80px;
     display: block;
     z-index: 3;
 }
@@ -154,11 +153,12 @@ input[type="button"]:hover {
 .frosch-container {
     position: absolute;
     width: 300px;
-    bottom: -70px;
-    right: 220px;
+    bottom: -20px;
+    right: 100px;
     display: block;
     z-index: 9;
     pointer-events: none;
+
 }
 
 .frosch-container img {
@@ -172,6 +172,7 @@ img {
 .speech::before{
     content: "";
 }
+
 
 .wave-wrapper {
     position: relative;
@@ -189,6 +190,8 @@ img {
     background-repeat: repeat-x;
     animation: waveMoveleft 30s linear infinite;
     z-index: 2;
+
+
 }
 
 @keyframes waveMoveleft {
@@ -221,61 +224,6 @@ img {
       background-position: 0 0;
     }
   }
-
-  @keyframes fadeInScale {
-    0%{
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-  }
-
-  @media (min-width: 700px) {
-    
-    .nymphe-container img{
-        width: 600px;
-    }
-    
-    .nymphe-container {
-        bottom: 130px;
-        right: -180px;
-    }
-
-    .seerose-container {
-        width: 200px;
-        bottom: 30px;
-        right: 50px;
-    }
-    
-    .seerose-container img {
-        width: 250px;
-    }
-
-    .frosch-container{
-        bottom: -80px;
-        right: 500px;
-    }
-
-    .frosch-container img{
-        width: 500px;
-    }
-
-    #answer-container {
-        max-width: 350px;
-        top: 60px;
-        right: 350px;
-        padding-right: 35px;
-    }
-
-    #answer-container.active::before{
-        background-image: url(/IMG/Sprechblase-clean.png);
-        width:100%;
-        height: 100%;
-    }
-    }
 
   .libelle{
     position: absolute;
@@ -312,6 +260,7 @@ img {
     .nymphe-container img{
         width: 700px;
     }
+
     
     .nymphe-container {
         bottom: 100px;
@@ -325,21 +274,31 @@ img {
     .stein-container {
         bottom: 70px;
         right: 400px;
+
     }
 
+    .frosch-container{
+        bottom: -100px;
+        right: 500px;
+    }
+
+    .frosch-container img{
+        width: 600px;
+    }
+    
     #answer-container {
-        max-width: 400px;
-        min-height: 180px;
-        top: 60px;
-        right: 550px;
-        padding-right: 35px;
+        width: 22vw;
+        height: 20svh;
+        top: 25px;
+        padding-left: 15px;
+        
     }
 
     #answer-container.active::before{
-        background-image: url(/IMG/Sprechblase-clean.png);
-        background-size: 100% 100%;
+        background-image: url(/IMG/Sprechblase-neu.png);
         width:100%;
         height: 100%;
     }
 
+ 
 }
