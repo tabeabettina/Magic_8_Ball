@@ -1,11 +1,10 @@
 Kurzbeschreibung des Projekts (max. 500 Zeichen)
 Stecken Sie in einer schwerigen Lebenssituation und Sie wissen nicht was zu tun ist?
 Dann ist unsere Webseite genau das richtige für Sie!
-Unserer allwissende Tümpelnixe hilft Ihnen aus der Klamme und steht Ihnen mit unglaublich tollem Rat zur Seite!
+Unserer allwissende Tümpelnixe hilft Ihnen aus der Klemme und steht Ihnen mit unglaublich tollem Rat zur Seite!
 Die Tümpelnixe begrüsst Sie mit einem freunldichen Winken und einem Flossenschlag.
 Die herumfliegenden Libellen sowie der hüpfende Frosch sind ästhetische Accessoirs der Tümpelnixe.
 Geben Sie Ihre Frage ins Feld ein, klicken Sie auf „Go!“ – und lassen Sie sich von der Weisheit der Tümpelnixe überraschen.
-
 
 
 Learnings und Schwierigkeiten Tabea
@@ -15,12 +14,13 @@ Die Animationen mit Java-Script kann ich nachvollziehen, allerdings habe ich noc
 
 
 Learnings und Schwierigkeiten Melissa
+Ich hatte besonders Mühe mit dem Styling der Sprechblase. Das Verzerren hat am Anfang grosse Schwierigkeiten bereitet und vorallem optisch nicht gut funktioniert. Durch das rumtesten konnte ich das Wissen aus dem ersten Semester vertiefen. Ich habe mir die komplexere Codes von ChatGPT nochmals erklären lassen, doch Javascript finde ich  leider immer noch sehr schwierig und ich habe Mühe, mir die Funktionen und Verbindungen zu merken.
 
 
-benutzte Ressourcen und Prompts
+Benutzte Ressourcen und Prompts
 Was gut funktioniert hat:
 ChatGPT war eine wertvolle Unterstützung, insbesondere bei der Fehlersuche und der Umsetzung von Animationen. 
-Besonders hilfreich war die Idee, die Flugbahn der Libelle mithilfe von Zufallswerten (random) unvorhersehbar zu gestalten.
+Besonders hilfreich war die Idee, die Flugbahn der Libelle mithilfe von Zufallswerten (random) unvorhersehbar zu gestalten. 
 
 Was weniger gut funktioniert hat:
 Die Animation der hellgrünen Welle bereitete uns Probleme. Sie sollte von rechts nach links verlaufen, funktionierte aber nur bei verkleinertem Browserfenster. 
